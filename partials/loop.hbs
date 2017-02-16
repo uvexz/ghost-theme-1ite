@@ -1,0 +1,11 @@
+{{!-- This is the post loop - each post will be output using this markup --}}
+{{#foreach posts}}
+<div class="content-head">
+    <h2><a href="{{url}}">{{title}}</a></h2>
+    <p><i class="fa fa-calendar"></i>&nbsp; {{date format="YYYY-MM-DD"}}  </p>
+</div>
+{{/foreach}}
+
+<div class="content-head">
+    <p><a href="#"><i class="fa fa-chevron-circle-up"></i> 返回顶部</a></p>
+</div>
