@@ -2,7 +2,7 @@
 {{#foreach posts}}
 <div class="content-head">
     <h2><a href="{{url}}">{{title}}</a></h2>
-    <p><i class="fa fa-calendar"></i>&nbsp; {{date format="YYYY-MM-DD"}}  </p>
+    <p><i class="fa fa-calendar"></i>&nbsp; {{date format="YYYY-MM-DD"}}  {{tags prefix="&nbsp; <i class=\"fa fa-tag\"></i> "}}</p>
 </div>
 {{/foreach}}
 

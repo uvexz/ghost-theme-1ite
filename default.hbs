@@ -6,7 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     {{!-- Page Meta --}}
-    <title>{{meta_title}}</title>
+    <title>
+        {{#is "home"}} 
+            {{@blog.title}}
+        {{else}}
+            {{#is "tag"}}
+                {{#tag}}
+                    {{name}} - Tag - {{@blog.title}}
+                {{/tag}}
+            {{else}}
+                {{#is "page, post"}}
+                    {{meta_title}} - {{@blog.title}}
+                {{else}}
+                    {{meta_title}}
+                {{/is}}
+            {{/is}}
+        {{/is}}
+    </title>
     <meta name="description" content="{{meta_description}}" />
 
     {{!-- Mobile Meta --}}
@@ -20,42 +36,42 @@
 
     <style>
         body, p, li, ul, h1, h2, h3, h4, h5, a, .btn, code, pre, input, textarea, blockquote {font-family: "Noto Sans SC","Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Hiragino Kaku Gothic Pro",Meiryo,"Malgun Gothic",sans-serif;}
-        .header .header-logo {margin: 80px auto 10px auto; max-width: 600px;}
+        .header .header-logo {margin: 80px auto 20px auto; max-width: 600px;}
             .header .header-logo h1 {font-size: 36px;font-weight: 600;text-align: left;}
-                .header .header-logo h1 a {color:#000;text-decoration: none;}
-                .header .header-logo h1 a:hover {color:red;text-decoration: none;}
-        .header .header-menu {margin: 10px auto 40px auto; max-width: 600px;}
+                .header .header-logo h1 a {color:#4A4A4A;text-decoration: none;}
+                .header .header-logo h1 a:hover {color:#FF3A2D;text-decoration: none;}
+        .header .header-menu {margin: 20px auto 20px auto; max-width: 600px;}
             .header .header-menu .header-nav {list-style:none;font-size:15px;}
                 .header .header-menu .header-nav li{position: relative;display: initial;padding-right:10px;}
                 .header .header-menu .header-nav li a:focus{background-color: #fff; font-weight: 400;}
                 .header .header-menu .header-nav a {text-decoration: none;color:#555;display: initial;font-weight: 400;}
-                .header .header-menu .header-nav a:hover{color:red;background-color: #fff;}
-                .header .header-menu .header-nav a.active {color:red;font-weight: 400;}
+                .header .header-menu .header-nav a:hover{color:#FF3A2D;background-color: #fff;}
+                .header .header-menu .header-nav a.active {color:#FF3A2D;font-weight: 400;}
         .main .content {margin:auto; max-width: 600px;}
         	.main .content .content-head {padding: 10px 0;}
                 .main .content .content-head h2 {font-size: 20px;padding-bottom: 5px;text-transform: uppercase;font-weight: 600;}
-                    .main .content .content-head h2 a {color:#000;text-decoration: none;}
-                    .main .content .content-head h2 a:hover {color:red;}
-                .main .content .content-head p {color:#555;font-size: 12px;}
+                    .main .content .content-head h2 a {color:#4A4A4A;text-decoration: none;}
+                    .main .content .content-head h2 a:hover {color:#FF3A2D;}
+                .main .content .content-head p {color:#555;font-size: 12px;text-transform: uppercase;}
                 .main .content .content-head p a {color:#555;font-size: 12px;text-decoration: none;}
-                .main .content .content-head p a:hover {color:red;}
+                .main .content .content-head p a:hover {color:#FF3A2D;}
             .main .content .article {padding-top: 30px;}
-                .main .content .article img {display: inline-block;max-width: 100%;height: auto;padding: 4px;line-height: 1.42857143;background-color: #fff;border: 1px solid #ddd;border-radius: 4px;-webkit-transition: all .2s ease-in-out;-o-transition: all .2s ease-in-out;transition: all .2s ease-in-out;}
+                .main .content .article img {display: inline-block;max-width: 100%;height: auto;padding: 4px;line-height: 1.42857143;background-color: #fff;border: 1px solid #ddd;border-radius: 4px;-webkit-transition: all .2s ease-in-out;-o-transition: all .2s ease-in-out;transition: all .2s ease-in-out;margin-bottom: 10px;}
                 .main .content .article ul {margin-top: 10px;margin-bottom: 10px;padding-left: 20px;list-style: square;}
-                .main .content .article p,.main .content .article a,.main .content .article blockquote,.main .content .article code,.main .content .article ul,.main .content .article li {font-size: 15px;}
-                .main .content .article h5 {font-size: 15px;font-weight: 600;}
-                .main .content .article h4 {font-size: 17px;font-weight: 600;}
-                .main .content .article h3 {font-size: 19px;font-weight: 600;}
-                .main .content .article h2 {font-size: 21px;font-weight: 600;}
-                .main .content .article h1 {font-size: 23px;font-weight: 600;}
-                .main .content .article a {color:red;text-decoration: none;}
-                .main .content .article a:hover {color:red;text-decoration: none;}
-                .main .content .article .back-to-top {color:#555;font-size: 15px;}
-                .main .content .article .back-to-top a {color:#555;font-size: 15px;text-decoration: none;}
-                .main .content .article .back-to-top a:hover {color:red;}
+                .main .content .article p,.main .content .article a,.main .content .article blockquote,.main .content .article code,.main .content .article ul,.main .content .article li {font-size: 15px;color:#4A4A4A;}
+                .main .content .article h5 {font-size: 15px;font-weight: 600;color:#4A4A4A;}
+                .main .content .article h4 {font-size: 17px;font-weight: 600;color:#4A4A4A;}
+                .main .content .article h3 {font-size: 19px;font-weight: 600;color:#4A4A4A;}
+                .main .content .article h2 {font-size: 21px;font-weight: 600;color:#4A4A4A;}
+                .main .content .article h1 {font-size: 23px;font-weight: 600;color:#4A4A4A;}
+                .main .content .article a {color:#FF3A2D;text-decoration: none;}
+                .main .content .article a:hover {color:#FF3A2D;text-decoration: none;}
+                .main .content .article .back-to-top {color:#4A4A4A;font-size: 15px;}
+                .main .content .article .back-to-top a {color:#4A4A4A;font-size: 15px;text-decoration: none;}
+                .main .content .article .back-to-top a:hover {color:#FF3A2D;}
         .footer {margin: 40px auto 40px auto; max-width: 600px;}
-            .footer p {color:#555;font-size: 12px;font-weight: 600;}
-            .footer a {text-decoration: none;color:red;}
+            .footer p {color:#4A4A4A;font-size: 12px;font-weight: 400;}
+            .footer a {text-decoration: none;color:#FF3A2D;}
         #comments {margin-right: -1em; margin-left: -1em;}
         	#comments li {list-style:none;}
         	#comments .cm-comment {padding: .5em 0 .5em 2.5em;}
@@ -71,7 +87,19 @@
 </head><body>
 <div class="header">
 	<div class="header-logo">
-		<h1><a href="/" class="start">{{meta_title}}</a></h1>
+		<h1><a href="/" class="start">
+        {{#is "home"}} 
+            {{@blog.title}}
+        {{else}}
+            {{#is "tag"}}
+                {{#tag}}
+                    <i class="fa fa-tag"></i>&nbsp;{{name}}
+                {{/tag}}
+            {{else}}
+                {{meta_title}}
+            {{/is}}
+        {{/is}}
+        </a></h1>
 	</div>
 	<div class="header-menu">
 		{{!-- The blog navigation links --}}
