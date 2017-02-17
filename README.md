@@ -1,16 +1,16 @@
-# Ghost Theme CopyDog
+# Ghost Theme 1ite
 
-A super simple theme for [Ghost](http://github.com/tryghost/ghost/).
+A lite theme for [Ghost](http://github.com/tryghost/ghost/).
 
-To download, visit the [releases](https://github.com/ygbhf/copydog/releases) page.
+To download, visit the [releases](https://github.com/ygbhf/1ite/releases) page.
 
 To start live preview, visit [YJK' Independent World](https://yjk.im).
 
 ## Screenshot 
 
-![desktop](https://raw.githubusercontent.com/ygbhf/copydog/master/assets/screenshot-desktop.png)
+![desktop](https://raw.githubusercontent.com/ygbhf/1ite/master/assets/screenshot-desktop.png)
 
-![mobile](https://raw.githubusercontent.com/ygbhf/copydog/master/assets/screenshot-mobile.png)
+![mobile](https://raw.githubusercontent.com/ygbhf/1ite/master/assets/screenshot-mobile.png)
 
 ## Copyright & License
 
