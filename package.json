@@ -3,7 +3,7 @@
     "description": "A lite theme for Ghost",
     "homepage": "https://yjk.im/1ite/",
     "demo": "https://yjk.im/",
-    "version": "0.03",
+    "version": "0.04",
     "engines": {
         "ghost": "^0.11.0"
     },
