@@ -1,0 +1,12 @@
+<div class="content-pagi">
+    <p>
+    {{#if prev}}
+        <a href="{{page_url prev}}"><i class="fa fa-chevron-circle-left"></i> 上一页</a>&nbsp;&nbsp;
+    {{/if}}
+    	第 {{page}} 页，共 {{pages}} 页&nbsp;&nbsp;
+    {{#if next}}
+        <a href="{{page_url next}}"><i class="fa fa-chevron-circle-right"></i> 下一页</a>&nbsp;&nbsp;
+    {{/if}}
+    	<a href="#"><i class="fa fa-chevron-circle-up"></i> 返回顶部</a>&nbsp;
+    </p>
+</div>
