@@ -10,8 +10,6 @@ To start live preview, visit [YJK' Blog](https://blog.yjk.im).
 
 ![desktop](https://raw.githubusercontent.com/ygbhf/1ite/master/assets/screenshot-desktop.png)
 
-![mobile](https://raw.githubusercontent.com/ygbhf/1ite/master/assets/screenshot-mobile.png)
-
 ## Copyright & License
 
 Copyright (c) 2019 [YJK](https://yjk.im) - Released under the MIT License.
