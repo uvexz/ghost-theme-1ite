@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>YJK - Error Page</title>
+  </head>
+  <body>
+  	<div class="main">
+  		<div id="runner"></div>
+      <h1>未找到相应页面</h1>
+      <p >请试试以下办法：</p>
+      <ul>
+          <li>检查您访问的网址是否正确</li>
+          <li>重新刷新本页面</li>
+          <li><a href="/">或者您可以试试返回首页</a></li>
+      </ul>
+    	<div class="error_code">THE_PAGE_YOU_ARE_LOOKING_FOR_IS_NOT_FOUND</div>
+    </div>
+  </body>
+</html>
+<style>
+  body {background-color: #f7f7f7;color: #2b2b2b;font-size: 0.95em;line-height: 1.55;}
+	.main{max-width:600px; margin: 50px auto auto;}
+  .main h1{color: #333;font-size: 1.6em;font-weight: normal;line-height: 1.25em;margin-bottom: 16px;}
+  .main ul{display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;}
+  .main li{display: list-item;
+    text-align: -webkit-match-parent;}
+	.main a{color:rgb(17, 85, 204);text-decoration: none;}
+  .main .error_code {color: #646464;
+    font-size: .86667em;
+    margin-top: 15px;
+    opacity: 1;
+    text-transform: uppercase;}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/t-rex-runner/dist/runner.js"></script>
+<script>initRunner( '#runner' );</script>
