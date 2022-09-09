@@ -6,7 +6,7 @@ To download, visit the [releases](https://github.com/ygbhf/ghost-theme-1ite/rele
 
 ## Start with error
 
-![error](https://raw.githubusercontent.com/ygbhf/ghost-theme-1ite/master/assets/screenshot-desktop.jpg)
+![error](https://raw.githubusercontent.com/ygbhf/ghost-theme-1ite/master/assets/error.jpg)
 
 ## Screenshot 
 
