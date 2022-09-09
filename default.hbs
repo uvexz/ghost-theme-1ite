@@ -4,19 +4,19 @@
     {{!-- Document Settings --}}
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
+    <link rel="dns-prefetch" href="https://cdn.sevencdn.com">
     {{!-- Page Meta --}}
     <title>
         {{#is "home"}} 
-            {{@blog.title}}
+            {{@site.title}}
         {{else}}
             {{#is "tag"}}
                 {{#tag}}
-                    {{name}} - Tag - {{@blog.title}}
+                    {{name}} - Tag - {{@site.title}}
                 {{/tag}}
             {{else}}
                 {{#is "page, post"}}
-                    {{meta_title}} - {{@blog.title}}
+                    {{meta_title}} - {{@site.title}}
                 {{else}}
                     {{meta_title}}
                 {{/is}}
@@ -31,10 +31,11 @@
     {{!-- Brand icon --}}
     <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
     <style>
-	.btn,a,blockquote,body,code,h1,h2,h3,h4,h5,input,li,p,pre,textarea,ul{font-family:"Noto Sans SC","Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Hiragino Kaku Gothic Pro",Meiryo,"Malgun Gothic",sans-serif}
+    @font-face {font-family: AlimamaShuHeiTi; src:url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlimamaShuHeiTi/AlimamaShuHeiTi-Bold/AlimamaShuHeiTi-Bold.woff2) format('woff2');}
+	.btn,a,blockquote,body,code,h1,h2,h3,h4,h5,input,li,p,pre,textarea,ul{font-family:"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Hiragino Kaku Gothic Pro", Meiryo, "Malgun Gothic",sans-serif}
 	.header .header-logo{margin:80px auto 20px auto;max-width:600px}
-		.header .header-logo h1{font-size:36px;font-weight:600;text-align:left}
-			.header .header-logo h1 a{color:#4A4A4A;text-decoration:none}
+		.header .header-logo h1{font-size: 36px; font-weight: 600; text-align: left;}
+			.header .header-logo h1 a{color:#4A4A4A; text-decoration: none; font-family:"AlimamaShuHeiTi", "Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Hiragino Kaku Gothic Pro", Meiryo, "Malgun Gothic",sans-serif;}
 			.header .header-logo h1 a:hover{-webkit-box-shadow: inset 0 -6px 0 rgba(255,74,110,.2);box-shadow: inset 0 -6px 0 rgba(255,74,110,.2);text-decoration:none}
 		.header .header-menu{margin:20px auto 20px auto;max-width:600px}
 			.header .header-menu .header-nav{list-style:none;font-size:15px}
@@ -45,8 +46,8 @@
 					.header .header-menu .header-nav a.active{-webkit-box-shadow: inset 0 -6px 0 rgba(36,177,209,.2);box-shadow: inset 0 -6px 0 rgba(36,177,209,.2);font-weight:400}
 	.main .content{margin:auto;max-width:600px}
 		.main .content .content-head{padding:10px 0}
-			.main .content .content-head h2{font-size:20px;padding-bottom:5px;text-transform:uppercase;font-weight:600}
-				.main .content .content-head h2 a{color:#4A4A4A;text-decoration:none}
+			.main .content .content-head h2{font-size:20px; padding-bottom: 5px; text-transform: uppercase; font-weight: 600}
+				.main .content .content-head h2 a{color: #4A4A4A; text-decoration: none;}
 				.main .content .content-head h2 a:hover{-webkit-box-shadow: inset 0 -6px 0 rgba(255,74,110,.2);box-shadow: inset 0 -6px 0 rgba(255,74,110,.2);}
 			.main .content .content-head p{color:#555;font-size:12px;text-transform:uppercase}
 				.main .content .content-head p a{color:#555;font-size:12px;text-decoration:none}
@@ -69,21 +70,20 @@
 				.main .content .content-pagi p{color:#555;font-size:15px;text-transform:uppercase}
 					.main .content .content-pagi p a{color:#555;font-size:15px;text-decoration:none}
 						.main .content .content-pagi p a:hover{-webkit-box-shadow: inset 0 -6px 0 rgba(255,74,110,.2);box-shadow: inset 0 -6px 0 rgba(255,74,110,.2);}
-	.footer{margin:40px auto 40px auto;max-width:600px}
+	.footer{margin: 40px auto 40px auto; max-width: 600px; text-transform: uppercase}
 		.footer p{color:#4A4A4A;font-size:12px;font-weight:400}
 		.footer a{text-decoration:none;-webkit-box-shadow: inset 0 -3px 0 rgba(36,177,209,.2);box-shadow: inset 0 -3px 0 rgba(36,177,209,.2);color:#4A4A4A;}
 			.footer a:hover{-webkit-box-shadow: inset 0 -3px 0 rgba(255,74,110,.2);box-shadow: inset 0 -3px 0 rgba(255,74,110,.2);text-decoration:none}
 	@media (max-width:768px){.header .header-logo h1,.header .header-menu{text-align:center}.header .header-menu,.main .content{padding-left:10px;padding-right:10px}.footer{padding:30px 10px 30px 10px}}
+	table{width:100%;margin:0 0 10px 0;border:1px solid #ccc;border-collapse:collapse}table td,table th{border:1px solid #ccc;color:#666;padding:.5em 1em}table th{font-weight:400;background:#f2f2f2}
 	</style>
 
-    {{!-- Ghost outputs important style and meta data with this tag --}}
-    {{ghost_head}}
 </head><body>
 <div class="header">
 	<div class="header-logo">
 		<h1><a href="/" class="start">
         {{#is "home"}} 
-            {{@blog.title}}
+            {{@site.title}}
         {{else}}
             {{#is "tag"}}
                 {{#tag}}
@@ -108,11 +108,12 @@
 </div>
 
 <div class="footer">
-		<p><i class="fa fa-copyright"></i></span> {{date format="YYYY"}} <a href="{{@blog.url}}">{{@blog.title}}</a>. Theme <a href="https://github.com/ygbhf/1ite" target="_blank">1ite</a> with <a href="https://github.com/TryGhost/Ghost" target="_blank">Ghost</a>. <a href="https://icp.gov.moe/?keyword=20219876" target="_blank">萌ICP备20219876号</a>.</p>
+	<p><i class="fa fa-copyright"></i></span> {{date format="YYYY"}} <a href="{{@site.url}}">{{@site.title}}</a>. Theme <a href="https://github.com/ygbhf/1ite" target="_blank">1ite</a> with <a href="https://github.com/TryGhost/Ghost" target="_blank">Ghost</a>. </p>
 </div>
 
 {{ghost_foot}}
-<link href="//use.sevencdn.com/npm/bootstrap@3.4.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="//use.sevencdn.com/npm/font-awesome@4.6.3/css/font-awesome.min.css" rel="stylesheet">
-<script src="//use.sevencdn.com/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<link href="https://cdn.sevencdn.com/npm/font-awesome@4.6.3/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://cdn.sevencdn.com/combine/npm/bootstrap@3.4.0/dist/css/bootstrap.min.css,gh/highlightjs/cdn-release/build/styles/default.min.css" rel="stylesheet">
+<script src="https://cdn.sevencdn.com/combine/npm/jquery@3.3.1/dist/jquery.min.js,gh/instantpage/instant.page/instantpage.min.js,gh/ygbhf/clicklove/clickfireworks.min.js,gh/highlightjs/cdn-release/build/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
 </body></html>

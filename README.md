@@ -2,13 +2,15 @@
 
 A lite theme for [Ghost](http://github.com/tryghost/ghost/).
 
-To download, visit the [releases](https://github.com/ygbhf/1ite/releases) page.
+To download, visit the [releases](https://github.com/ygbhf/ghost-theme-1ite/releases) page.
 
-To start live preview, visit [YJK' Blog](https://blog.yjk.im).
+## Start with error
+
+![error](https://raw.githubusercontent.com/ygbhf/ghost-theme-1ite/master/assets/screenshot-desktop.jpg)
 
 ## Screenshot 
 
-![desktop](https://raw.githubusercontent.com/ygbhf/1ite/master/assets/screenshot-desktop.png)
+![desktop](https://raw.githubusercontent.com/ygbhf/ghost-theme-1ite/master/assets/screenshot-desktop.jpg)
 
 ## Copyright & License
 

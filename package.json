@@ -1,20 +1,20 @@
 {
     "name": "1ite",
     "description": "A lite theme for Ghost",
-    "homepage": "https://github.com/ygbhf/1ite",
-    "version": "0.0.6",
+    "homepage": "https://github.com/ygbhf/ghost-theme-1ite",
+    "version": "0.1.0",
     "engines": {
-        "ghost": "^2.11.1"
+        "ghost": "^4.0.0"
     },
     "license": "MIT",
     "screenshots": {
-        "desktop": "assets/screenshot-desktop.png",
-        "mobile": "assets/screenshot-mobile.png"
+        "desktop": "assets/screenshot-desktop.jpg",
+        "mobile": "assets/screenshot-mobile.jpg"
     },
     "author": {
         "name": "YJK",
         "email": "a@yjk.im",
-        "url": "https://blog.yjk.im/"
+        "url": "https://yjk.im"
     },
     "gpm": {
         "type": "theme",
@@ -32,10 +32,10 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git://github.com/ygbhf/1ite.git"
+        "url": "git://github.com/ygbhf/ghost-theme-1ite.git"
     },
-    "bugs": "https://github.com/ygbhf/1ite/issues",
-    "contributors": "https://github.com/ygbhf/1ite/graphs/contributors",
+    "bugs": "https://github.com/ygbhf/ghost-theme-1ite/issues",
+    "contributors": "https://github.com/ygbhf/ghost-theme-1ite/graphs/contributors",
     "config": {
         "posts_per_page": 10
     }
